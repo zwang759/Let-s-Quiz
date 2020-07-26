@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="27968dda-b5bd-4287-9dbd-4dbe8b73a45f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/controllers/questions_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/sessions_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/question.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/question_tag.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/scoreboard.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/tag.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1fE0uUR3zBjJxbXsdlXH0Uei53u" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="27968dda-b5bd-4287-9dbd-4dbe8b73a45f" name="Default Changelist" comment="" />
+      <created>1595768166743</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595768166743</updated>
+      <workItem from="1595768170289" duration="17603000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="43" y="460" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595770400352">
+      <screen x="43" y="23" width="1301" height="817" />
+    </state>
+    <state x="43" y="460" key="#com.intellij.fileTypes.FileTypeChooser/43.23.1301.817@43.23.1301.817" timestamp="1595770400352" />
+    <state x="444" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595799609047">
+      <screen x="43" y="23" width="1301" height="817" />
+    </state>
+    <state x="444" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/43.23.1301.817@43.23.1301.817" timestamp="1595799609047" />
+    <state x="354" y="168" width="683" height="486" key="find.popup" timestamp="1595800421853">
+      <screen x="44" y="23" width="1300" height="817" />
+    </state>
+    <state x="353" y="168" width="683" height="486" key="find.popup/43.23.1301.817@43.23.1301.817" timestamp="1595797841479" />
+    <state x="354" y="168" width="683" height="486" key="find.popup/44.23.1300.817@44.23.1300.817" timestamp="1595800421853" />
+  </component>
+</project>
