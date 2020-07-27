@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @question.description %>
+</p>
+
+<p>
+  <strong>Option 1:</strong>
+  <%= @question.option1 %>
+</p>
+
+<p>
+  <strong>Option 2:</strong>
+  <%= @question.option2 %>
+</p>
+
+<p>
+  <strong>Option 3:</strong>
+  <%= @question.option3 %>
+</p>
+
+<p>
+  <strong>Option 4:</strong>
+  <%= @question.option4 %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @question.answer %>
+</p>
+
+<%= link_to 'Edit', edit_question_path(@course) %> |
+<%= link_to 'Back', 'javascript:history.back()' %>

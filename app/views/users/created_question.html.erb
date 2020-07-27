@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="text-center my-5">
+  <%= @user.name %>
+</h1>
+
+<h3 class="my-3">Created Questions:</h3>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Description</th>
+    <th>Option 1</th>
+    <th>Option 2</th>
+    <th>Option 3</th>
+    <th>Option 4</th>
+    <th>Answer</th>
+    <th colspan="6"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @questions.each do |question| %>
+    <tr>
+      <td><%= question.description %></td>
+      <td><%= question.option1 %></td>
+      <td><%= question.option2 %></td>
+      <td><%= question.option3 %></td>
+      <td><%= question.option4 %></td>
+      <td><%= question.answer %></td>
+      <td><%= link_to 'Drop', "/drop/#{question.id}", class: 'btn btn-primary', method: :post %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

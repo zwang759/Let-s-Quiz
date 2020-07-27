@@ -7,17 +7,13 @@
       <%= form_for(@user, url: signup_path) do |f| %>
         <%= render 'shared/error_messages' %>
 
-        <%= f.label :name %>
-        <%= f.text_field :name, class: 'form-control mb-3' %>
+        <%= f.text_field :name, class: 'form-control mb-3', placeholder: 'Name'%>
 
-        <%= f.label :email %>
-        <%= f.email_field :email, class: 'form-control mb-3' %>
+        <%= f.email_field :email, class: 'form-control mb-3', placeholder: 'E-mail'%>
 
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control mb-3' %>
+        <%= f.password_field :password, class: 'form-control mb-3', placeholder: 'Password'%>
 
-        <%= f.label :password_confirmation, "Confirmation" %>
-        <%= f.password_field :password_confirmation, class: 'form-control mb-4' %>
+        <%= f.password_field :password_confirmation, class: 'form-control mb-4', placeholder: 'Password Confirmation'%>
 
         <%= f.submit "Create my account", class: "btn btn-primary" %>
       <% end %>

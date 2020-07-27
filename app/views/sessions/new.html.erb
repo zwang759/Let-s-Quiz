@@ -7,11 +7,9 @@
 
     <div class="col mx-auto">
       <%= form_for(:session, url: login_path) do |f| %>
-        <%= f.label :email %>
-        <%= f.email_field :email, class: 'form-control mb-3' %>
+        <%= f.email_field :email, class: 'form-control mb-3', placeholder: 'E-mail' %>
 
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control mb-4' %>
+        <%= f.password_field :password, class: 'form-control mb-4', placeholder: 'Password'%>
 
         <%= f.submit "Log in", class: "btn btn-primary mb-2" %>
       <% end %>

@@ -1,0 +1,32 @@
+<%= form_tag assessment_answers_path(method: :post), :name => 'example-1', :id => 'wrapped' do %>
+
+  <% @empty_answers.each do |answer| %>
+
+    <%= fields_for 'answers[]', answer, include_id: false do |r| %>
+
+      <% q = AssessmentQuestion.where(order: @empty_answers.index(answer) + 1).first %>
+
+      <%= r.collection_radio_buttons(:letter, q.assessment_options.order(“letter”), :letter, :answer, include_hidden: false) do |r| %>
+
+        <div class=”form-group radio_input”>
+          <%= r.radio_button(class: 'icheck', name: 'answers[' + (q.order — 1).to_s + '][letter]') + r.label(:class => '') %>
+        </div>
+
+      <% end %>
+
+
+      <%= r.hidden_field :assessment_question_id, value: q.id, name: 'answers[' + @empty_answers.index(answer).to_s + '][assessment_question_id]' %>
+
+      <%= r.hidden_field :assessment_id, value: params[:assessment_id], name: 'answers[' + @empty_answers.index(answer).to_s + '][assessment_id]' %>
+
+    <% end %>
+
+  <% end %>
+
+  <div id=”bottom-wizard”>
+    <button type=”button” name=”backward” class=”backward”>Backward</button>
+    <button type=”button” name=”forward” class=”forward”>Forward</button>
+    <button type=”submit” name=”process” class=”submit”>Submit</button>
+  </div><! — /bottom-wizard →
+
+<% end %>

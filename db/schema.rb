@@ -32,7 +32,12 @@ ActiveRecord::Schema.define(version: 0) do
 
   create_table "questions", force: :cascade do |t|
     t.text "description", null: false
-    t.string "created_by", null: false
+    t.string "option1", null: false
+    t.string "option2", null: false
+    t.string "option3", null: false
+    t.string "option4", null: false
+    t.string "answer", null: false
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

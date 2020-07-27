@@ -2,87 +2,53 @@
 
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="course-tab" data-toggle="tab" href="#course" role="tab" aria-controls="course" aria-selected="true">Course</a>
+    <a class="nav-link active" id="question-tab" data-toggle="tab" href="#question" role="tab" aria-controls="question" aria-selected="true">Question</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="instructor-tab" data-toggle="tab" href="#instructor" role="tab" aria-controls="instructor" aria-selected="false">Instructor</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="subject-tab" data-toggle="tab" href="#subject" role="tab" aria-controls="subject" aria-selected="false">Subject</a>
+    <a class="nav-link" id="scoreboard-tab" data-toggle="tab" href="#scoreboard" role="tab" aria-controls="scoreboard" aria-selected="false">Scoreboard</a>
   </li>
 </ul>
 
-<!--<div class="tab-content" id="myTabContent">-->
-  <%# Course tab %>
-<!--  <div class="tab-pane show active" id="course" role="tabpanel" aria-labelledby="course-tab">-->
-<!--    <table class="table table-responsive table-striped">-->
-<!--      <thead>-->
-<!--      <tr>-->
-<!--        <th>Code</th>-->
-<!--        <th>Name</th>-->
-<!--        <th>Description</th>-->
-<!--      </tr>-->
-<!--      </thead>-->
+<div class="tab-content" id="myTabContent">
+  <% Question tab %>
+  <div class="tab-pane show active" id="question" role="tabpanel" aria-labelledby="question-tab">
+    <table class="table table-responsive table-striped">
+      <thead>
+      <tr>
+        <th>Tag</th>
+        <th>Description</th>
+      </tr>
+      </thead>
 
-<!--      <tbody>-->
-      <%# @courses.each do |course| %>
-<!--        <tr>-->
-<!--          <td><%#= course.id %></td>-->
-<!--          <td><%#= course.name %></td>-->
-<!--          <td><%#= course.description %></td>-->
-<!--        </tr>-->
-      <%# end %>
-<!--      </tbody>-->
-<!--    </table>-->
-<!--  </div>-->
+      <tbody>
+      <% @questions.each do |question| %>
+        <tr>
+          <td><%= question.tag %></td>
+          <td><%= question.description %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
 
-  <%# Instructor tab %>
-<!--  <div class="tab-pane fade" id="instructor" role="tabpanel" aria-labelledby="instructor-tab">-->
-<!--    <table class="table table-responsive table-striped">-->
-<!--      <thead>-->
-<!--      <tr>-->
-<!--        <th>First</th>-->
-<!--        <th>Middle</th>-->
-<!--        <th>Last</th>-->
-<!--        <th>Email</th>-->
-<!--        <th>Id</th>-->
-<!--      </tr>-->
-<!--      </thead>-->
+  <% Scoreboard tab %>
+  <div class="tab-pane fade" id="scoreboard" role="tabpanel" aria-labelledby="scoreboard-tab">
+    <table class="table table-responsive table-striped">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Score</th>
+      </tr>
+      </thead>
 
-<!--      <tbody>-->
-      <%# @instructors.each do |instructor| %>
-<!--        <tr>-->
-<!--          <td><%#= instructor.first %></td>-->
-<!--          <td><%#= instructor.middle %></td>-->
-<!--          <td><%#= instructor.last %></td>-->
-<!--          <td><%#= instructor.email %></td>-->
-<!--          <td><%#= instructor.id %></td>-->
-<!--        </tr>-->
-      <%# end %>
-<!--      </tbody>-->
-<!--    </table>-->
-<!--  </div>-->
-
-  <%# Subject tab %>
-<!--  <div class="tab-pane fade" id="subject" role="tabpanel" aria-labelledby="subject-tab">-->
-<!--    <table class="table table-responsive table-striped">-->
-<!--      <thead>-->
-<!--      <tr>-->
-<!--        <th>Name</th>-->
-<!--        <th>Abbreviation</th>-->
-<!--        <th>Id</th>-->
-<!--      </tr>-->
-<!--      </thead>-->
-
-<!--      <tbody>-->
-      <%# @subjects.each do |subject| %>
-<!--        <tr>-->
-<!--          <td><%#= subject.name %></td>-->
-<!--          <td><%#= subject.abbreviation %></td>-->
-<!--          <td><%#= subject.id %></td>-->
-<!--        </tr>-->
-      <%# end %>
-<!--      </tbody>-->
-<!--    </table>-->
-<!--  </div>-->
-<!--</div>-->
+      <tbody>
+      <% @scoreboard.each do |record| %>
+        <tr>
+          <td><%= record.name %></td>
+          <td><%= record.score %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

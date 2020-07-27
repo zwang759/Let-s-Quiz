@@ -7,29 +7,18 @@
 
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     <ul class="navbar-nav">
-<!--      <li class="nav-item">-->
-        <%#= link_to "Course", courses_path, class: "nav-link" %>
-<!--      </li>-->
-<!--      <li class="nav-item">-->
-        <%#= link_to "Instructor", instructors_path, class: "nav-link" %>
-<!--      </li>-->
-<!--      <li class="nav-item">-->
-        <%#= link_to "Subject", subjects_path, class: "nav-link" %>
-<!--      </li>-->
-<!--      <li class="nav-item">-->
-        <%#= link_to "Search", search_path, class: "nav-link" %>
-<!--      </li>-->
+      <li class="nav-item">
+        <%= link_to "Question", questions_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Scoreboard", scoreboard_path, class: "nav-link" %>
+      </li>
 
       <% if logged_in? %>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Me</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <p class="dropdown-item">Hi, <%= current_user.name %></p>
-            <%#= link_to "Hi, #{current_user.name}", current_user, class: "dropdown-item" %>
-
-<!--            <div class="dropdown-divider"></div>-->
-            <%#= link_to "Enrolled Courses", enrolled_course_path, class: "dropdown-item" %>
-
             <div class="dropdown-divider"></div>
             <%= link_to "Log out", logout_path, method: :delete, class: "dropdown-item" %>
           </div>
@@ -38,9 +27,5 @@
         <%= link_to "Log in", login_path, class: "nav-link"%>
       <% end %>
     </ul>
-    <!--    <form class="form-inline my-2 my-lg-0">-->
-    <!--      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-    <!--      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-    <!--    </form>-->
   </div>
 </nav>

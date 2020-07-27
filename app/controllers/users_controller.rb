@@ -7,7 +7,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    # debugger
   end
 
   def new
@@ -26,27 +25,16 @@ class UsersController < ApplicationController
     end
   end
 
-  def enroll
-    if Enrollment.where(user_id: current_user.id, course_id: params[:course_id]).size >= 1
-      flash[:danger] = 'This course is already enrolled'
-    else
-      Enrollment.create(user_id: current_user.id, course_id: params[:course_id])
-      flash[:success] = 'Course enroll success!'
-    end
-    # redirect_to search_path
-    redirect_to enrolled_course_path
-  end
-
   def drop
-    Enrollment.where(user_id: current_user.id, course_id: params[:course_id]).first.destroy
-    flash[:success] = 'Course drop success!'
+    Question.where(user_id: current_user.id).first.destroy
+    flash[:success] = 'Question successfully deleted!'
 
-    redirect_to enrolled_course_path
+    redirect_to created_question_path
   end
 
-  def enrolled_course
+  def created_question
     @user = current_user
-    @courses = current_user.courses.all
+    @questions = current_user.questions.all
   end
 
 
