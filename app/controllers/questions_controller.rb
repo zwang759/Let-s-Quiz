@@ -7,29 +7,29 @@ class QuestionsController < ApplicationController
     @questions = Question.all
   end
 
-  # GET /courses/1
-  # GET /courses/1.json
+  # GET /questions/1
+  # GET /questions/1.json
   def show
   end
 
-  # GET /courses/new
+  # GET /questions/new
   def new
     @question = Question.new
   end
 
-  # GET /courses/1/edit
+  # GET /questions/1/edit
   def edit
   end
 
-  # POST /courses
-  # POST /courses.json
+  # POST /questions
+  # POST /questions.json
   def create
-    @question = Question.new(course_params)
+    @question = Question.new(question_params)
 
     respond_to do |format|
       if @question.save
         format.html { redirect_to @question, notice: 'Qeustion was successfully created.' }
-        format.json { render :show, status: :created, location: @course }
+        format.json { render :show, status: :created, location: @question }
       else
         format.html { render :new }
         format.json { render json: @question.errors, status: :unprocessable_entity }
@@ -37,12 +37,12 @@ class QuestionsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /courses/1
-  # PATCH/PUT /courses/1.json
+  # PATCH/PUT /questions/1
+  # PATCH/PUT /questions/1.json
   def update
     respond_to do |format|
-      if @question.update(course_params)
-        format.html { redirect_to @question, notice: 'Course was successfully updated.' }
+      if @question.update(question_params)
+        format.html { redirect_to @question, notice: 'Question was successfully updated.' }
         format.json { render :show, status: :ok, location: @question }
       else
         format.html { render :edit }
@@ -51,12 +51,12 @@ class QuestionsController < ApplicationController
     end
   end
 
-  # DELETE /courses/1
-  # DELETE /courses/1.json
+  # DELETE /questions/1
+  # DELETE /questions/1.json
   def destroy
     @question.destroy
     respond_to do |format|
-      format.html { redirect_to courses_url, notice: 'Course was successfully destroyed.' }
+      format.html { redirect_to questions_url, notice: 'Question was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -68,7 +68,7 @@ class QuestionsController < ApplicationController
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def course_params
-    params.require(:course).permit(:name, :code, :description)
+  def question_params
+    params.require(:question).permit(:name, :code, :description)
   end
 end
