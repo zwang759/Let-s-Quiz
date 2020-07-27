@@ -30,8 +30,9 @@ ActiveRecord::Schema.define(version: 0) do
     t.datetime "updated_at", null: false
   end
 
+
   create_table "questions", force: :cascade do |t|
-    t.text "description", null: false
+    t.string "description", null: false
     t.string "option1", null: false
     t.string "option2", null: false
     t.string "option3", null: false
@@ -56,9 +57,9 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "password_digest"
   end
 
-  create_table "scoreboard", force: :cascade do |t|
+  create_table "scores", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "score"
+    t.bigint "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

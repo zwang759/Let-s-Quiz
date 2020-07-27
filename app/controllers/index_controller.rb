@@ -1,7 +1,7 @@
 class IndexController < ApplicationController
   def home
     @questions = Question.all
-    @scoreboard = Scoreboard.all
+    @scores = Score.all
   end
 
   def create
