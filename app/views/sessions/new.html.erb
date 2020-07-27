@@ -1,0 +1,22 @@
+<% provide(:title, "Log in") %>
+
+
+<div class="card shadow-lg mx-auto my-5 ">
+  <div class="card-body">
+    <h1 class="card-title text-center mt-3 mb-5">Log in</h1>
+
+    <div class="col mx-auto">
+      <%= form_for(:session, url: login_path) do |f| %>
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control mb-3' %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control mb-4' %>
+
+        <%= f.submit "Log in", class: "btn btn-primary mb-2" %>
+      <% end %>
+
+      <small>New user? <%= link_to "Sign up now!", signup_path %></small>
+    </div>
+  </div>
+</div>
