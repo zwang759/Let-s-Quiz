@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_many :questions
+  has_many :like_unlike_questions
+  has_many :likeOrUnlike, through: :like_unlike_questions
 
   before_save { self.email = email.downcase }
 
