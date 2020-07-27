@@ -31,14 +31,14 @@ ActiveRecord::Schema.define(version: 0) do
   end
 
   create_table "questions", force: :cascade do |t|
-    t.text "question", null: false
+    t.text "description", null: false
     t.string "created_by", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "tags", force: :cascade do |t|
-    t.string "tag", null: false
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
