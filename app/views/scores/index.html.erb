@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="text-center my-5">Scoreboard</h1>
+
+<table class="table table-responsive table-striped">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Value</th>
+    <th colspan="2"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @scores.each do |score| %>
+    <tr>
+      <td><%= score.name %></td>
+      <td><%= score.value %></td>
+      <td><%= link_to 'Show', user %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<br>

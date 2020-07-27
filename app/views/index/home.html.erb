@@ -15,7 +15,7 @@
     <table class="table table-responsive table-striped">
       <thead>
       <tr>
-        <th>Tag</th>
+<!--        <th>Tag</th>-->
         <th>Description</th>
       </tr>
       </thead>
@@ -23,7 +23,7 @@
       <tbody>
       <% @questions.each do |question| %>
         <tr>
-          <td><%= question.tag %></td>
+<!--          <td><%#= question.tag %></td>-->
           <td><%= question.description %></td>
         </tr>
       <% end %>
@@ -42,10 +42,10 @@
       </thead>
 
       <tbody>
-      <% @scores.each do |record| %>
+      <% @scores.each do |score| %>
         <tr>
-          <td><%= record.name %></td>
-          <td><%= record.score %></td>
+          <td><%= score.name %></td>
+          <td><%= score.value %></td>
         </tr>
       <% end %>
       </tbody>

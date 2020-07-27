@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   post '/drop/:question_id', to: 'users#drop'
 
   get '/questions', to: 'questions#index'
-  get '/score', to: 'score#index'
+  get '/scores', to: 'scores#index'
 
   get '/created_question', to: 'users#created_question'
 

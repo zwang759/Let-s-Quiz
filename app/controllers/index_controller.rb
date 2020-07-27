@@ -4,9 +4,6 @@ class IndexController < ApplicationController
     @scores = Score.all
   end
 
-  def create
-  end
-
   def show
     @questions = Question.first
     respond_to do |format|
