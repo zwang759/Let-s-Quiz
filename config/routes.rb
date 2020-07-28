@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   resources :questions
   resources :tags
-  resources :score
+  resources :scores
   resources :users
 
 end
