@@ -19,7 +19,9 @@ class IndexController < ApplicationController
     @result = false
     if @question.answer == answer
       @result = true
-      user.increment!(:score)
+      user.increment!(:score, by=4)
+    else
+      user.increment!(:score, by=-1)
     end
     @score = user.score
   end

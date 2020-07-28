@@ -12,11 +12,11 @@
   </thead>
 
   <tbody>
-  <% @scores.each do |score| %>
+  <% @scores.each do |record| %>
     <tr>
-      <td><%= score.name %></td>
-      <td><%= score.value %></td>
-      <td><%= link_to 'Show', user %></td>
+      <td><%= record.name %></td>
+      <td><%= record.score %></td>
+<!--      <td><%#= link_to 'Show', user %></td>-->
     </tr>
   <% end %>
   </tbody>
