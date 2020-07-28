@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get '/created_question', to: 'users#created_question'
 
   get 'index/show'
+  get '/challenge', to: 'index#question'
+  get '/answer', to: 'index#answer'
 
   resources :questions
   resources :tags

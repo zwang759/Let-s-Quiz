@@ -52,16 +52,17 @@ ActiveRecord::Schema.define(version: 0) do
   create_table "users", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
+    t.integer "score", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
   end
 
-  create_table "scores", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  # create_table "scores", force: :cascade do |t|
+  #   t.bigint "user_id"
+  #   t.bigint "value"
+  #   t.datetime "created_at", null: false
+  #   t.datetime "updated_at", null: false
+  # end
 
 end

@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Question: <%= @question.description %></h5>
+    <p>Your answer: <%= @result %></p>
+    <p>Correct answer: <%= @question.answer %> </p>
+
+    <p>Total score: <%= @score %></p>
+
+    <%= link_to "Next question", challenge_path, class: "btn btn-primary card-link" %>
+  </div>
+</div>

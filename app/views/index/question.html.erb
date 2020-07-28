@@ -1,0 +1,45 @@
+<h4 class="my-3">Your score: <%= @score %> </h4>
+
+
+<% if @question %>
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= @question.description %></h5>
+
+      <%= form_with(url: answer_path, method: :get, local: true) do |form| %>
+
+        <div class="form-check">
+          <%= form.radio_button :answer, @question.option1, checked: true, class: 'form-check-input' %>
+          <%= label :option1, @question.option1 %>
+        </div>
+
+        <div class="form-check">
+          <%= form.radio_button :answer, @question.option2, class: 'form-check-input' %>
+          <%= label :option1, @question.option2 %>
+        </div>
+
+        <div class="form-check">
+          <%= form.radio_button :answer, @question.option3, class: 'form-check-input' %>
+          <%= label :option1, @question.option3 %>
+        </div>
+
+        <div class="form-check">
+          <%= form.radio_button :answer, @question.option4, class: 'form-check-input' %>
+          <%= label :option1, @question.option4 %>
+        </div>
+
+        <%= form.hidden_field :question_id, value: @question.id %>
+        <%= form.submit "Submit", class: 'btn btn-primary card-link' %>
+        <%#= link_to "Next question", challenge_path, class: "btn btn-primary card-link" %>
+      <% end %>
+
+    </div>
+  </div>
+
+
+<% else %>
+  <h3>No questions yet. </h3>
+  <%= link_to 'Create a new one?', new_question_path %>
+<% end %>
+
