@@ -1,6 +1,6 @@
 # README
 
-<h1> A web platform where users can make multiple choice questions and take the quiz where all questions are made by users, it also has a leaderboard </h1>
+<h2> A web platform where users can make multiple choice questions and take the quiz where all questions are made by users, it also has a leaderboard </h2>
 
 * Ruby & Rails version
 
