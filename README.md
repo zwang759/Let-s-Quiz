@@ -14,6 +14,6 @@
 
 ## Starting Development Environment
 
-Run `bundle install` 
-Run `rails s`
+<p> Run `bundle install` </p>
+<p> Run `rails s` </p>
  
