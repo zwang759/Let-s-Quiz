@@ -1,16 +1,19 @@
-# README
+<h1>Let's Quiz</h1>
 
-<h2> A web platform where users can make multiple choice questions and take the quiz where all questions are made by users, it also has a leaderboard </h2>
 
-* Ruby & Rails version
+<p> A web platform where users can make multiple choice questions and take the quiz where all questions are made by users, it also has a leaderboard </p>
 
-Ruby '2.7.1'
-Rails '~> 6.0.3', '>= 6.0.3.2'
+## Ruby & Rails version
 
-* Database initialization
-Install Postgres
+<p> Ruby '2.7.1' </p>
+<p> Rails '~> 6.0.3', '>= 6.0.3.2' </p>
 
-* Run
-bundle install  
-rails s
+## Database Dependency
+
+<p> Postgres </p>
+
+## Starting Development Environment
+
+1. Run `bundle install` 
+2. Run `rails s`
  
