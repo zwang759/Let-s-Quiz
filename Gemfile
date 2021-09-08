@@ -20,7 +20,7 @@ gem 'jbuilder', '~> 2.7'
 # The bcrypt Ruby gem provides a simple wrapper for safely handling passwords.
 gem 'bcrypt', '~> 3.1', '>= 3.1.15'
 # Provides a better error page for Rails and other Rack apps. Includes source code inspection, a live REPL and local/instance variable inspection for all stack frames.
-gem 'better_errors', '~> 2.7', '>= 2.7.1'
+gem 'better_errors', '~> 2.8'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
